@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer!
     var timer: Timer? = nil
     var secondsRemaining = 60
-    let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 7] // Int values are seconds
+    let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 7]
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
         timer?.invalidate()
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func playSound() {
-        let url = Bundle.main.url(forResource: "alarm", withExtension: "wav")
+        let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
     }
